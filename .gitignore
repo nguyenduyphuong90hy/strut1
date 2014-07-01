@@ -1,0 +1,16 @@
+Hiện thị lỗi trong voffice
+
+<div id="divMessage">
+            <logic:notPresent name="messageError">
+                <html:errors property="alert"   bundle="<%=interfaces%>" />
+            </logic:notPresent>
+            <logic:present name="messageError">
+                <bean:define name="messageError" id="temp" type="java.lang.String" />
+                <div class="messageError message" style="padding-right:8px;margin-right:8px;font-family:Tahoma,Arial;font-size:10px;text-transform:none;">
+                    <p class="pStyleMessage"> 
+                    <bean:message key="<%=temp%>" bundle="<%=interfaces%>"/>
+                    </p>
+                </div>
+            </logic:present>
+</div>
+
