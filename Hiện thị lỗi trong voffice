@@ -1,4 +1,4 @@
-Hiện thị lỗi trong voffice
+
 
 <div id="divMessage">
             <logic:notPresent name="messageError">
