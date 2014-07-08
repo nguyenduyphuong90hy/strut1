@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    function getTreeLuanChuyen(){
+        var right=$("#idright").val();
+        if(right==0){
+            alert("<bean:message key="tree.must.choise.right" bundle="<%=interfaces%>"/>");
+            return false;
+        }
+        return true;
+    }
+    
+    function openPopup(){
+        
+        $("#treeViewDiv").fadeIn(700);
+        $(".background_overlay").fadeIn(400);
+        positionPopup();
+    };
+</script>
+onclick="if(getTreeLuanChuyen()){openPopup();postAjax('luanchuyen','treeViewDiv',anchor + ':_SHOW_TREE_NEW')}"
